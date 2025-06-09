@@ -36,5 +36,10 @@ namespace Field_Renting_System
         {
 
         }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
