@@ -1,6 +1,6 @@
 ﻿namespace Field_Renting_System
 {
-    partial class Form1
+    partial class LoginUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginUser));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Login = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -44,7 +45,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.Login = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(347, 445);
             this.panel1.TabIndex = 1;
+            // 
+            // Login
+            // 
+            this.Login.AutoSize = true;
+            this.Login.BackColor = System.Drawing.Color.SeaGreen;
+            this.Login.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Login.Location = new System.Drawing.Point(104, 24);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(123, 44);
+            this.Login.TabIndex = 10;
+            this.Login.Text = "Login";
+            this.Login.Click += new System.EventHandler(this.label3_Click);
             // 
             // button2
             // 
@@ -134,19 +147,20 @@
             // 
             // textBox_password
             // 
-            this.textBox_password.Location = new System.Drawing.Point(142, 185);
+            this.textBox_password.Location = new System.Drawing.Point(112, 185);
             this.textBox_password.Multiline = true;
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(202, 26);
+            this.textBox_password.Size = new System.Drawing.Size(232, 26);
             this.textBox_password.TabIndex = 3;
+            this.textBox_password.TextChanged += new System.EventHandler(this.textBox_password_TextChanged);
             // 
             // textBox_email
             // 
             this.textBox_email.BackColor = System.Drawing.Color.White;
-            this.textBox_email.Location = new System.Drawing.Point(142, 123);
+            this.textBox_email.Location = new System.Drawing.Point(112, 123);
             this.textBox_email.Multiline = true;
             this.textBox_email.Name = "textBox_email";
-            this.textBox_email.Size = new System.Drawing.Size(205, 27);
+            this.textBox_email.Size = new System.Drawing.Size(235, 27);
             this.textBox_email.TabIndex = 2;
             this.textBox_email.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -169,11 +183,12 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 123);
+            this.label1.Location = new System.Drawing.Point(31, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Email";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -206,19 +221,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(24, 669);
             this.panel5.TabIndex = 5;
-            // 
-            // Login
-            // 
-            this.Login.AutoSize = true;
-            this.Login.BackColor = System.Drawing.Color.SeaGreen;
-            this.Login.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Login.Location = new System.Drawing.Point(104, 24);
-            this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(123, 44);
-            this.Login.TabIndex = 10;
-            this.Login.Text = "Login";
-            this.Login.Click += new System.EventHandler(this.label3_Click);
             // 
             // Form1
             // 

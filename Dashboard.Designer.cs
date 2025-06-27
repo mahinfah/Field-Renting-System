@@ -47,19 +47,30 @@ namespace task
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.profilepanel = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Update_btn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.update = new System.Windows.Forms.TextBox();
+            this.profilepanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.gender = new System.Windows.Forms.Label();
+            this.nid = new System.Windows.Forms.Label();
+            this.phoneno = new System.Windows.Forms.Label();
+            this.pass = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.Label();
+            this.age = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,8 +84,9 @@ namespace task
             this.panel13.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel18.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.profilepanel.SuspendLayout();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -275,7 +287,7 @@ namespace task
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 271);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -291,19 +303,11 @@ namespace task
             this.panel8.Controls.Add(this.panel12);
             this.panel8.Controls.Add(this.panel11);
             this.panel8.Controls.Add(this.panel10);
-            this.panel8.Location = new System.Drawing.Point(352, 100);
+            this.panel8.Location = new System.Drawing.Point(324, 79);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(767, 566);
+            this.panel8.Size = new System.Drawing.Size(795, 587);
             this.panel8.TabIndex = 8;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
-            // 
-            // profilepanel
-            // 
-            this.profilepanel.Location = new System.Drawing.Point(375, 499);
-            this.profilepanel.Name = "profilepanel";
-            this.profilepanel.Size = new System.Drawing.Size(747, 191);
-            this.profilepanel.TabIndex = 5;
-            this.profilepanel.Visible = false;
             // 
             // panel15
             // 
@@ -334,22 +338,11 @@ namespace task
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel17.Controls.Add(this.label2);
+            this.panel17.Controls.Add(this.button3);
             this.panel17.Location = new System.Drawing.Point(0, 3);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(270, 62);
+            this.panel17.Size = new System.Drawing.Size(270, 72);
             this.panel17.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(45, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 38);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Rent a Field";
             // 
             // panel12
             // 
@@ -372,22 +365,10 @@ namespace task
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel18.Controls.Add(this.label5);
             this.panel18.Location = new System.Drawing.Point(3, 3);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(270, 62);
             this.panel18.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Snow;
-            this.label5.Location = new System.Drawing.Point(-9, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(335, 36);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "View Booking Requests ";
             // 
             // panel10
             // 
@@ -407,22 +388,184 @@ namespace task
             this.panel14.Size = new System.Drawing.Size(270, 62);
             this.panel14.TabIndex = 3;
             // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel19.Controls.Add(this.button1);
+            this.panel19.Controls.Add(this.Update_btn);
+            this.panel19.Controls.Add(this.comboBox1);
+            this.panel19.Controls.Add(this.update);
+            this.panel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel19.ForeColor = System.Drawing.Color.Teal;
+            this.panel19.Location = new System.Drawing.Point(324, 624);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(798, 364);
+            this.panel19.TabIndex = 5;
+            this.panel19.Visible = false;
+            this.panel19.Paint += new System.Windows.Forms.PaintEventHandler(this.panel19_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(453, 404);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 40);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Dashboard";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Update_btn
+            // 
+            this.Update_btn.Location = new System.Drawing.Point(256, 404);
+            this.Update_btn.Name = "Update_btn";
+            this.Update_btn.Size = new System.Drawing.Size(142, 40);
+            this.Update_btn.TabIndex = 7;
+            this.Update_btn.Text = "Update";
+            this.Update_btn.UseVisualStyleBackColor = true;
+            this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Name",
+            "Email",
+            "Password",
+            "Age",
+            "Phoneno",
+            "Gender",
+            "Nid"});
+            this.comboBox1.Location = new System.Drawing.Point(221, 278);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(116, 33);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // update
+            // 
+            this.update.Location = new System.Drawing.Point(393, 278);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(296, 30);
+            this.update.TabIndex = 0;
+            // 
+            // profilepanel
+            // 
+            this.profilepanel.Controls.Add(this.label6);
+            this.profilepanel.Controls.Add(this.gender);
+            this.profilepanel.Controls.Add(this.nid);
+            this.profilepanel.Controls.Add(this.phoneno);
+            this.profilepanel.Controls.Add(this.pass);
+            this.profilepanel.Controls.Add(this.Email);
+            this.profilepanel.Controls.Add(this.age);
+            this.profilepanel.Location = new System.Drawing.Point(324, 649);
+            this.profilepanel.Name = "profilepanel";
+            this.profilepanel.Size = new System.Drawing.Size(795, 98);
+            this.profilepanel.TabIndex = 5;
+            this.profilepanel.Visible = false;
+            this.profilepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.profilepanel_Paint);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(457, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 28);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "label6";
+            // 
+            // gender
+            // 
+            this.gender.AutoSize = true;
+            this.gender.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gender.Location = new System.Drawing.Point(457, 415);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(77, 28);
+            this.gender.TabIndex = 6;
+            this.gender.Text = "gender";
+            // 
+            // nid
+            // 
+            this.nid.AutoSize = true;
+            this.nid.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nid.Location = new System.Drawing.Point(457, 366);
+            this.nid.Name = "nid";
+            this.nid.Size = new System.Drawing.Size(41, 28);
+            this.nid.TabIndex = 5;
+            this.nid.Text = "nid";
+            // 
+            // phoneno
+            // 
+            this.phoneno.AutoSize = true;
+            this.phoneno.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneno.Location = new System.Drawing.Point(458, 254);
+            this.phoneno.Name = "phoneno";
+            this.phoneno.Size = new System.Drawing.Size(95, 28);
+            this.phoneno.TabIndex = 4;
+            this.phoneno.Text = "phoneno";
+            this.phoneno.Click += new System.EventHandler(this.phoneno_Click);
+            // 
+            // pass
+            // 
+            this.pass.AutoSize = true;
+            this.pass.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass.Location = new System.Drawing.Point(458, 202);
+            this.pass.Name = "pass";
+            this.pass.Size = new System.Drawing.Size(52, 28);
+            this.pass.TabIndex = 3;
+            this.pass.Text = "pass";
+            // 
+            // Email
+            // 
+            this.Email.AutoSize = true;
+            this.Email.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Location = new System.Drawing.Point(458, 147);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(60, 28);
+            this.Email.TabIndex = 2;
+            this.Email.Text = "Email";
+            this.Email.Click += new System.EventHandler(this.Email_Click);
+            // 
+            // age
+            // 
+            this.age.AutoSize = true;
+            this.age.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.age.Location = new System.Drawing.Point(457, 312);
+            this.age.Name = "age";
+            this.age.Size = new System.Drawing.Size(45, 28);
+            this.age.TabIndex = 1;
+            this.age.Text = "age";
+            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel9.Controls.Add(this.label1);
-            this.panel9.Location = new System.Drawing.Point(340, 12);
+            this.panel9.Location = new System.Drawing.Point(321, 12);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(782, 61);
+            this.panel9.Size = new System.Drawing.Size(801, 61);
             this.panel9.TabIndex = 9;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkCyan;
+            this.button3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Window;
+            this.button3.Location = new System.Drawing.Point(23, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(221, 56);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Rent Field";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1119, 664);
-            this.Controls.Add(this.profilepanel);
             this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel19);
+            this.Controls.Add(this.profilepanel);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel1);
             this.Name = "Dashboard";
@@ -442,11 +585,12 @@ namespace task
             this.panel15.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
             this.panel11.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
             this.panel10.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.profilepanel.ResumeLayout(false);
+            this.profilepanel.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.ResumeLayout(false);
@@ -490,9 +634,20 @@ namespace task
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel profilepanel;
+        private System.Windows.Forms.Label age;
+        private System.Windows.Forms.Label nid;
+        private System.Windows.Forms.Label phoneno;
+        private System.Windows.Forms.Label pass;
+        private System.Windows.Forms.Label Email;
+        private System.Windows.Forms.Label gender;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox update;
+        private System.Windows.Forms.Button Update_btn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

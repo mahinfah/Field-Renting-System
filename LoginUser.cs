@@ -15,9 +15,9 @@ namespace Field_Renting_System
 
     
 
-    public partial class Form1 : Form
+    public partial class LoginUser : Form
     {
-        public Form1()
+        public LoginUser()
         {
             InitializeComponent();
         }
@@ -49,7 +49,8 @@ namespace Field_Renting_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //reset
+            //resetform4
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -111,6 +112,16 @@ namespace Field_Renting_System
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_password_TextChanged(object sender, EventArgs e)
         {
 
         }

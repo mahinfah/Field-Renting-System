@@ -17,8 +17,8 @@ namespace Field_Renting_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-          Application.Run(new Dashboard("mahin"));
-           // Application.Run(new Form1());
+      //Application.Run(new Dashboard("mahin"));
+           Application.Run(new LoginUser());
 
 
         }
