@@ -67,6 +67,8 @@ namespace Field_Renting_System
         private void check()
 
         {
+
+
             string email = textBox_email.Text;
             string password = textBox_password.Text;
             string connString = @"Data Source=MAHIN;Initial Catalog=testing_db;Integrated Security=True";
@@ -95,6 +97,7 @@ namespace Field_Renting_System
                        // Form2 form22 = new Form2();
 
                         form2.Show();
+
                         Registration r = new Registration();
                         r.Show();
                       //  this.Hide();

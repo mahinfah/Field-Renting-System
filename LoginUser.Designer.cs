@@ -34,9 +34,9 @@
             this.Login = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Seller = new System.Windows.Forms.RadioButton();
+            this.buyer = new System.Windows.Forms.RadioButton();
+            this.Admin = new System.Windows.Forms.RadioButton();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.textBox_email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,9 +65,9 @@
             this.panel1.Controls.Add(this.Login);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.Seller);
+            this.panel1.Controls.Add(this.buyer);
+            this.panel1.Controls.Add(this.Admin);
             this.panel1.Controls.Add(this.textBox_password);
             this.panel1.Controls.Add(this.textBox_email);
             this.panel1.Controls.Add(this.label2);
@@ -111,39 +111,39 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton3
+            // Seller
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(131, 240);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(77, 25);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Seller";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.Seller.AutoSize = true;
+            this.Seller.Location = new System.Drawing.Point(131, 240);
+            this.Seller.Name = "Seller";
+            this.Seller.Size = new System.Drawing.Size(77, 25);
+            this.Seller.TabIndex = 6;
+            this.Seller.TabStop = true;
+            this.Seller.Text = "Seller";
+            this.Seller.UseVisualStyleBackColor = true;
+            this.Seller.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // radioButton2
+            // buyer
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(214, 240);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(80, 25);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Buyer";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.buyer.AutoSize = true;
+            this.buyer.Location = new System.Drawing.Point(214, 240);
+            this.buyer.Name = "buyer";
+            this.buyer.Size = new System.Drawing.Size(80, 25);
+            this.buyer.TabIndex = 5;
+            this.buyer.TabStop = true;
+            this.buyer.Text = "Buyer";
+            this.buyer.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // Admin
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(36, 240);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(89, 25);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Admin";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Admin.AutoSize = true;
+            this.Admin.Location = new System.Drawing.Point(36, 240);
+            this.Admin.Name = "Admin";
+            this.Admin.Size = new System.Drawing.Size(89, 25);
+            this.Admin.TabIndex = 4;
+            this.Admin.TabStop = true;
+            this.Admin.Text = "Admin";
+            this.Admin.UseVisualStyleBackColor = true;
             // 
             // textBox_password
             // 
@@ -222,7 +222,7 @@
             this.panel5.Size = new System.Drawing.Size(24, 669);
             this.panel5.TabIndex = 5;
             // 
-            // Form1
+            // LoginUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -234,7 +234,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "LoginUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -254,9 +254,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.TextBox textBox_email;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton Seller;
+        private System.Windows.Forms.RadioButton buyer;
+        private System.Windows.Forms.RadioButton Admin;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
