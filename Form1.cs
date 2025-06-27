@@ -49,7 +49,7 @@ namespace Field_Renting_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //reset
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -109,8 +109,11 @@ namespace Field_Renting_System
                 MessageBox.Show(ex.Message);
             }
         }
-        
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
         

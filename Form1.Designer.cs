@@ -44,6 +44,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.Login = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +52,6 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-
             this.pictureBox1.Location = new System.Drawing.Point(464, 108);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(320, 445);
@@ -62,6 +62,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Login);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.radioButton3);
@@ -142,7 +143,7 @@
             // textBox_email
             // 
             this.textBox_email.BackColor = System.Drawing.Color.White;
-            this.textBox_email.Location = new System.Drawing.Point(139, 113);
+            this.textBox_email.Location = new System.Drawing.Point(142, 123);
             this.textBox_email.Multiline = true;
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.Size = new System.Drawing.Size(205, 27);
@@ -168,7 +169,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 112);
+            this.label1.Location = new System.Drawing.Point(40, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 27);
             this.label1.TabIndex = 0;
@@ -206,11 +207,24 @@
             this.panel5.Size = new System.Drawing.Size(24, 669);
             this.panel5.TabIndex = 5;
             // 
+            // Login
+            // 
+            this.Login.AutoSize = true;
+            this.Login.BackColor = System.Drawing.Color.SeaGreen;
+            this.Login.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Login.Location = new System.Drawing.Point(104, 24);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(123, 44);
+            this.Login.TabIndex = 10;
+            this.Login.Text = "Login";
+            this.Login.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(914, 677);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
@@ -247,6 +261,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label Login;
     }
 }
 
