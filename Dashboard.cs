@@ -11,15 +11,18 @@ using System.Data.SqlClient;
 using System.IO;
 namespace task
 {
-    public partial class Form2 : Form
+    public partial class Dashboard : Form
     {
         private string userEmail;
 
-        public Form2(string userEmail)
+        public Dashboard(string userEmail)
         {
             this.userEmail = userEmail;
             InitializeComponent(); // Ensure this is called to initialize the form components  
+            RetrieveUserName();
         }
+
+        
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -86,6 +89,61 @@ namespace task
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            RetrieveUserName();
+        }
+
+        private void RetrieveUserName()
+        {
+            try
+            {
+                string connectionString = @"Data Source=MAHIN;Initial Catalog=testing_db;Integrated Security=True";
+                string email = userEmail;
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT name FROM Table_reg WHERE email = @Email";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Email", email);
+
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string userName = reader["name"] as string;
+                        if (!string.IsNullOrEmpty(userName))
+                        {
+                            label3.Text = userName;
+                        }
+                        else
+                        {
+                            label3.Text = "Name not found.";
+                            MessageBox.Show("Name data is null.");
+                        }
+                    }
+                    else
+                    {
+                        label3.Text = "Name not found.";
+                        MessageBox.Show("No name found for the provided email.");
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                label3.Text = "Error";
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

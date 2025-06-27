@@ -90,7 +90,7 @@ namespace Field_Renting_System
                     if (reader.Read())
                     {
                         string userEmail = reader["email"].ToString();
-                      Form2 form2 = new Form2(userEmail);
+                      Dashboard form2 = new Dashboard(userEmail);
                        // Form2 form22 = new Form2();
 
                         form2.Show();

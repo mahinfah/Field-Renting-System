@@ -25,7 +25,7 @@ namespace Field_Renting_System
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO Table_userimage (Email, imageq) VALUES (@Email, @Photo)";
+                string query = "INSERT INTO Table_userimage (Email, image) VALUES (@Email, @Photo)";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Email", textBox_email.Text);
