@@ -17,9 +17,10 @@ namespace Field_Renting_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Dashboard("mahin"));
-          // Application.Run(new LoginUser());
-
+          //  Application.Run(new Dashboard("mahin"));
+         //  Application.Run(new LoginUser());
+            // Application.Run(new Booking("mahin"));
+            Application.Run(new bookingreq());
 
         }
     }

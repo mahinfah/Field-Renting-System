@@ -324,7 +324,9 @@ namespace task
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Close(); // Close the current Dashboard form  
+            Booking bookingForm = new Booking(userEmail); // Pass the email to the Booking class  
+            bookingForm.ShowDialog(); // Open the Booking form as a dialog  
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
