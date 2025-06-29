@@ -64,11 +64,8 @@ namespace Field_Renting_System
 
         }
         
-        private void check()
-
+private void check()
         {
-
-
             string email = textBox_email.Text;
             string password = textBox_password.Text;
             string connString = @"Data Source=MAHIN;Initial Catalog=testing_db;Integrated Security=True";
@@ -84,27 +81,52 @@ namespace Field_Renting_System
                 using (SqlConnection con = new SqlConnection(connString))
                 {
                     con.Open();
-                    string query = "SELECT Email FROM Table_reg WHERE Email=@Email AND password=@Password";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Password", password);
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    string query = "";
 
-                    if (reader.Read())
+                    if (Admin.Checked)
                     {
-                        string userEmail = reader["email"].ToString();
-                      Dashboard form2 = new Dashboard(userEmail);
-                       // Form2 form22 = new Form2();
-
-                        form2.Show();
-
-                        Registration r = new Registration();
-                        r.Show();
-                      //  this.Hide();
+                        // Check if admin  
+                        if (email == "admin" && password == "admin")
+                        {
+                            AdminDash form2 = new AdminDash();
+                            form2.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid admin credentials.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        return;
                     }
-                    else
+                    else if (buyer.Checked)
                     {
-                        MessageBox.Show("Invalid email or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // Check buyer credentials  
+                        query = "SELECT Email FROM Table_reg WHERE Email=@Email AND password=@Password";
+                    }
+                    else if (Seller.Checked)
+                    {
+                        // Check seller credentials  
+                        query = "SELECT Email FROM Seller_table WHERE Email=@Email AND password=@Password";
+                    }
+
+                    if (!string.IsNullOrEmpty(query))
+                    {
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        cmd.Parameters.AddWithValue("@Password", password);
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            string userEmail = reader["Email"].ToString();
+                            Dashboard form2 = new Dashboard(userEmail);
+                            form2.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid email or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -127,6 +149,13 @@ namespace Field_Renting_System
         private void textBox_password_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Registration r = new Registration();
+            r.Show();
+            this.Hide();
         }
     }
 

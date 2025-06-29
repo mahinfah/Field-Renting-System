@@ -33,6 +33,9 @@ namespace Field_Renting_System
            //// SellerReg sellerRegForm = new SellerReg(); // Create an instance of SellerReg form
          //   sellerRegForm.Show(); // Show the SellerReg form
             MessageBox.Show("Added Seller Clicked");
+            SellerReg eee = new SellerReg();
+            eee.Show();
+            this.Hide();
         }
 
         private void BtnSBuyer_Click(object sender, EventArgs e)
@@ -41,8 +44,13 @@ namespace Field_Renting_System
         }
 
         private void BtnSField_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Search Field Clicked");
+        {//
+          //  MessageBox.Show("Search Field Clicked");
+          LoginUser e = new LoginUser();
+            e.Show();
+            this.Hide(); // Hide the current form
+
+
         }
 
         private void btnABuyer_Click(object sender, EventArgs e)
@@ -89,9 +97,7 @@ namespace Field_Renting_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SellerReg eee = new SellerReg();
-            eee.Show();
-            this.Hide();
+            
 
 
         }

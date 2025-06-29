@@ -98,24 +98,7 @@ namespace Field_Renting_System
            else if (Female.Checked)
                 gender = "Female";
 
-            int age;
-            if (int.TryParse(textBox_Age.Text, out age))
-            {
-                if (age > 18)
-                {
-                  //  MessageBox.Show("Age is greater than 18.");
-                    // You can proceed with registration here
-                }
-                else
-                {
-                    MessageBox.Show("Age must be greater than 18.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid number for age.");
-            }
-
+           
 
             //   if (cbprogramming.Checked)
             //     skills = "Programming,";
@@ -125,13 +108,18 @@ namespace Field_Renting_System
             //     skills += "Research";
             // dept = comboBox1.Text;
 
-            MessageBox.Show("Name:" + name + "\n Email:" + email 
+         /*   MessageBox.Show("Name:" + name + "\n Email:" + email 
                + " \n Password" + pass 
                 + "\n Gender:" + 
                gender 
                +"\n age"+age  );
+         */
            
             insert();
+            LoginUser l = new LoginUser();
+            l.Show();
+            this.Close();   
+
 
 
         }

@@ -32,7 +32,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Login = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Seller = new System.Windows.Forms.RadioButton();
             this.buyer = new System.Windows.Forms.RadioButton();
@@ -45,6 +44,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,8 +62,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.Login);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.Seller);
             this.panel1.Controls.Add(this.buyer);
@@ -91,19 +91,9 @@
             this.Login.Text = "Login";
             this.Login.Click += new System.EventHandler(this.label3_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(193, 411);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 31);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Reset Password";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(59, 298);
+            this.button1.Location = new System.Drawing.Point(59, 286);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(230, 41);
             this.button1.TabIndex = 7;
@@ -222,6 +212,16 @@
             this.panel5.Size = new System.Drawing.Size(24, 669);
             this.panel5.TabIndex = 5;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(156, 417);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(188, 28);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Register";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // LoginUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -257,13 +257,13 @@
         private System.Windows.Forms.RadioButton Seller;
         private System.Windows.Forms.RadioButton buyer;
         private System.Windows.Forms.RadioButton Admin;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label Login;
+        private System.Windows.Forms.Button button3;
     }
 }
 
