@@ -48,6 +48,8 @@ namespace Field_Renting_System
             this.btnRPass = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SellerManagement.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -58,9 +60,9 @@ namespace Field_Renting_System
             this.LbDashboard.BackColor = System.Drawing.Color.Transparent;
             this.LbDashboard.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbDashboard.ForeColor = System.Drawing.Color.DarkOrange;
-            this.LbDashboard.Location = new System.Drawing.Point(224, 50);
+            this.LbDashboard.Location = new System.Drawing.Point(252, 62);
             this.LbDashboard.Name = "LbDashboard";
-            this.LbDashboard.Size = new System.Drawing.Size(543, 81);
+            this.LbDashboard.Size = new System.Drawing.Size(654, 96);
             this.LbDashboard.TabIndex = 0;
             this.LbDashboard.Text = "Admin Dashboard";
             this.LbDashboard.Click += new System.EventHandler(this.label1_Click);
@@ -68,10 +70,13 @@ namespace Field_Renting_System
             // SellerManagement
             // 
             this.SellerManagement.BackColor = System.Drawing.Color.Yellow;
+            this.SellerManagement.Controls.Add(this.button1);
             this.SellerManagement.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SellerManagement.Location = new System.Drawing.Point(53, 38);
+            this.SellerManagement.Location = new System.Drawing.Point(60, 48);
+            this.SellerManagement.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SellerManagement.Name = "SellerManagement";
-            this.SellerManagement.Size = new System.Drawing.Size(274, 130);
+            this.SellerManagement.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SellerManagement.Size = new System.Drawing.Size(308, 162);
             this.SellerManagement.TabIndex = 1;
             this.SellerManagement.TabStop = false;
             this.SellerManagement.Text = "Seller Management";
@@ -81,9 +86,11 @@ namespace Field_Renting_System
             // 
             this.GBoxAllBuyers.BackColor = System.Drawing.Color.MediumTurquoise;
             this.GBoxAllBuyers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBoxAllBuyers.Location = new System.Drawing.Point(361, 38);
+            this.GBoxAllBuyers.Location = new System.Drawing.Point(406, 48);
+            this.GBoxAllBuyers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GBoxAllBuyers.Name = "GBoxAllBuyers";
-            this.GBoxAllBuyers.Size = new System.Drawing.Size(268, 130);
+            this.GBoxAllBuyers.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GBoxAllBuyers.Size = new System.Drawing.Size(302, 162);
             this.GBoxAllBuyers.TabIndex = 2;
             this.GBoxAllBuyers.TabStop = false;
             this.GBoxAllBuyers.Text = "View All Buyers";
@@ -93,9 +100,11 @@ namespace Field_Renting_System
             // 
             this.GBoxAllField.BackColor = System.Drawing.Color.Violet;
             this.GBoxAllField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBoxAllField.Location = new System.Drawing.Point(53, 188);
+            this.GBoxAllField.Location = new System.Drawing.Point(60, 235);
+            this.GBoxAllField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GBoxAllField.Name = "GBoxAllField";
-            this.GBoxAllField.Size = new System.Drawing.Size(274, 123);
+            this.GBoxAllField.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GBoxAllField.Size = new System.Drawing.Size(308, 154);
             this.GBoxAllField.TabIndex = 2;
             this.GBoxAllField.TabStop = false;
             this.GBoxAllField.Text = "View All Fields";
@@ -105,9 +114,11 @@ namespace Field_Renting_System
             // 
             this.GBoxTotalPayment.BackColor = System.Drawing.Color.MediumVioletRed;
             this.GBoxTotalPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBoxTotalPayment.Location = new System.Drawing.Point(361, 188);
+            this.GBoxTotalPayment.Location = new System.Drawing.Point(406, 235);
+            this.GBoxTotalPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GBoxTotalPayment.Name = "GBoxTotalPayment";
-            this.GBoxTotalPayment.Size = new System.Drawing.Size(268, 123);
+            this.GBoxTotalPayment.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GBoxTotalPayment.Size = new System.Drawing.Size(302, 154);
             this.GBoxTotalPayment.TabIndex = 2;
             this.GBoxTotalPayment.TabStop = false;
             this.GBoxTotalPayment.Text = "Total Payment";
@@ -126,18 +137,20 @@ namespace Field_Renting_System
             this.panel1.Controls.Add(this.btnASeller);
             this.panel1.Controls.Add(this.btnSField);
             this.panel1.Controls.Add(this.btnRPass);
-            this.panel1.Location = new System.Drawing.Point(6, 202);
+            this.panel1.Location = new System.Drawing.Point(7, 252);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(243, 369);
+            this.panel1.Size = new System.Drawing.Size(273, 461);
             this.panel1.TabIndex = 3;
             // 
             // btnUField
             // 
             this.btnUField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUField.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUField.Location = new System.Drawing.Point(35, 319);
+            this.btnUField.Location = new System.Drawing.Point(39, 399);
+            this.btnUField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUField.Name = "btnUField";
-            this.btnUField.Size = new System.Drawing.Size(128, 28);
+            this.btnUField.Size = new System.Drawing.Size(144, 35);
             this.btnUField.TabIndex = 13;
             this.btnUField.Text = "Update Field";
             this.btnUField.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -148,9 +161,10 @@ namespace Field_Renting_System
             // 
             this.btnDField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDField.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDField.Location = new System.Drawing.Point(35, 283);
+            this.btnDField.Location = new System.Drawing.Point(39, 354);
+            this.btnDField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDField.Name = "btnDField";
-            this.btnDField.Size = new System.Drawing.Size(128, 28);
+            this.btnDField.Size = new System.Drawing.Size(144, 35);
             this.btnDField.TabIndex = 12;
             this.btnDField.Text = "Delete Field";
             this.btnDField.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -161,9 +175,10 @@ namespace Field_Renting_System
             // 
             this.btnAField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAField.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAField.Location = new System.Drawing.Point(35, 249);
+            this.btnAField.Location = new System.Drawing.Point(39, 311);
+            this.btnAField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAField.Name = "btnAField";
-            this.btnAField.Size = new System.Drawing.Size(128, 28);
+            this.btnAField.Size = new System.Drawing.Size(144, 35);
             this.btnAField.TabIndex = 11;
             this.btnAField.Text = "Add Field";
             this.btnAField.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -174,9 +189,10 @@ namespace Field_Renting_System
             // 
             this.btnUBuyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUBuyer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUBuyer.Location = new System.Drawing.Point(35, 215);
+            this.btnUBuyer.Location = new System.Drawing.Point(39, 269);
+            this.btnUBuyer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUBuyer.Name = "btnUBuyer";
-            this.btnUBuyer.Size = new System.Drawing.Size(128, 28);
+            this.btnUBuyer.Size = new System.Drawing.Size(144, 35);
             this.btnUBuyer.TabIndex = 10;
             this.btnUBuyer.Text = "Update Buyers";
             this.btnUBuyer.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -188,9 +204,10 @@ namespace Field_Renting_System
             this.btnSBuyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSBuyer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSBuyer.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSBuyer.Location = new System.Drawing.Point(35, 79);
+            this.btnSBuyer.Location = new System.Drawing.Point(39, 99);
+            this.btnSBuyer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSBuyer.Name = "btnSBuyer";
-            this.btnSBuyer.Size = new System.Drawing.Size(128, 28);
+            this.btnSBuyer.Size = new System.Drawing.Size(144, 35);
             this.btnSBuyer.TabIndex = 6;
             this.btnSBuyer.Text = "Search Buyer";
             this.btnSBuyer.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -201,9 +218,10 @@ namespace Field_Renting_System
             // 
             this.btnDBuyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDBuyer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDBuyer.Location = new System.Drawing.Point(35, 181);
+            this.btnDBuyer.Location = new System.Drawing.Point(39, 226);
+            this.btnDBuyer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDBuyer.Name = "btnDBuyer";
-            this.btnDBuyer.Size = new System.Drawing.Size(128, 28);
+            this.btnDBuyer.Size = new System.Drawing.Size(144, 35);
             this.btnDBuyer.TabIndex = 9;
             this.btnDBuyer.Text = "Delete Buyers";
             this.btnDBuyer.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -214,9 +232,10 @@ namespace Field_Renting_System
             // 
             this.btnABuyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnABuyer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnABuyer.Location = new System.Drawing.Point(35, 147);
+            this.btnABuyer.Location = new System.Drawing.Point(39, 184);
+            this.btnABuyer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnABuyer.Name = "btnABuyer";
-            this.btnABuyer.Size = new System.Drawing.Size(128, 28);
+            this.btnABuyer.Size = new System.Drawing.Size(144, 35);
             this.btnABuyer.TabIndex = 8;
             this.btnABuyer.Text = "Add Buyers";
             this.btnABuyer.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -227,9 +246,10 @@ namespace Field_Renting_System
             // 
             this.btnASeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnASeller.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnASeller.Location = new System.Drawing.Point(35, 45);
+            this.btnASeller.Location = new System.Drawing.Point(39, 56);
+            this.btnASeller.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnASeller.Name = "btnASeller";
-            this.btnASeller.Size = new System.Drawing.Size(128, 28);
+            this.btnASeller.Size = new System.Drawing.Size(144, 35);
             this.btnASeller.TabIndex = 5;
             this.btnASeller.Text = "Add Seller";
             this.btnASeller.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -240,9 +260,10 @@ namespace Field_Renting_System
             // 
             this.btnSField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSField.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSField.Location = new System.Drawing.Point(35, 113);
+            this.btnSField.Location = new System.Drawing.Point(39, 141);
+            this.btnSField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSField.Name = "btnSField";
-            this.btnSField.Size = new System.Drawing.Size(128, 28);
+            this.btnSField.Size = new System.Drawing.Size(144, 35);
             this.btnSField.TabIndex = 7;
             this.btnSField.Text = "Search Field";
             this.btnSField.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -254,9 +275,10 @@ namespace Field_Renting_System
             this.btnRPass.BackColor = System.Drawing.Color.Transparent;
             this.btnRPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRPass.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRPass.Location = new System.Drawing.Point(35, 11);
+            this.btnRPass.Location = new System.Drawing.Point(39, 14);
+            this.btnRPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRPass.Name = "btnRPass";
-            this.btnRPass.Size = new System.Drawing.Size(128, 28);
+            this.btnRPass.Size = new System.Drawing.Size(144, 35);
             this.btnRPass.TabIndex = 4;
             this.btnRPass.Text = "Reset Password";
             this.btnRPass.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -266,9 +288,10 @@ namespace Field_Renting_System
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel2.Location = new System.Drawing.Point(6, 158);
+            this.panel2.Location = new System.Drawing.Point(7, 198);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(950, 26);
+            this.panel2.Size = new System.Drawing.Size(1069, 32);
             this.panel2.TabIndex = 4;
             // 
             // panel3
@@ -278,27 +301,41 @@ namespace Field_Renting_System
             this.panel3.Controls.Add(this.GBoxAllField);
             this.panel3.Controls.Add(this.GBoxAllBuyers);
             this.panel3.Controls.Add(this.GBoxTotalPayment);
-            this.panel3.Location = new System.Drawing.Point(244, 202);
+            this.panel3.Location = new System.Drawing.Point(274, 252);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(712, 369);
+            this.panel3.Size = new System.Drawing.Size(801, 461);
             this.panel3.TabIndex = 5;
             // 
-            // Form1
+            // button1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.button1.BackColor = System.Drawing.Color.Khaki;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(6, 39);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(296, 123);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add Seller";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // AdminDash
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-           // this.BackgroundImage = global::Field_Renting_System.Properties.Resources.full_campus_view_from_stadium;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(982, 603);
+            this.ClientSize = new System.Drawing.Size(1105, 754);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LbDashboard);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "AdminDash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SellerManagement.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -326,6 +363,7 @@ namespace Field_Renting_System
         private System.Windows.Forms.Button btnUBuyer;
         private System.Windows.Forms.Button btnDBuyer;
         private System.Windows.Forms.Button btnABuyer;
+        private System.Windows.Forms.Button button1;
     }
 }
 

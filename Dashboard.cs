@@ -259,43 +259,7 @@ namespace task
 
         private void UpdateUserDetails()
         {
-            try
-            {
-                string connectionString = @"Data Source=MAHIN;Initial Catalog=testing_db;Integrated Security=True";
-                string email = userEmail;
-                string columnToUpdate = comboBox1.SelectedItem?.ToString();
-                string newValue = update.Text;
 
-                if (string.IsNullOrEmpty(columnToUpdate) || string.IsNullOrEmpty(newValue))
-                {
-                    MessageBox.Show("Please select a field and provide a value to update.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = $"UPDATE Table_reg SET {columnToUpdate} = @NewValue WHERE email = @Email";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@NewValue", newValue);
-                    command.Parameters.AddWithValue("@Email", email);
-
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Details updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("No details were updated. Please check the field and value.", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void Update_btn_Click(object sender, EventArgs e)
@@ -347,6 +311,9 @@ namespace task
         private void button9_Click(object sender, EventArgs e)
         {
             //see booking request
+           Userbookingreq r= new Userbookingreq(userEmail);
+            r.Show();
+            this.Close(); // Close the current Dashboard form
 
         }
 
@@ -379,6 +346,36 @@ namespace task
         {
             panel19.SendToBack();
             profilepanel.SendToBack();
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

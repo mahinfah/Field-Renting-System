@@ -86,5 +86,14 @@ namespace Field_Renting_System
         private void GBoxAllBuyers_Enter(object sender, EventArgs e)
         {
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SellerReg eee = new SellerReg();
+            eee.Show();
+            this.Hide();
+
+
+        }
     }
 }

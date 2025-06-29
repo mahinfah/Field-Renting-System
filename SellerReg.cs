@@ -16,6 +16,13 @@ namespace Field_Renting_System
     {
         private string name, password, email, nid, phone;
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminDash a= new AdminDash();
+            a.Show();
+            this.Hide();
+        }
+
         public SellerReg()
         {
             InitializeComponent();
@@ -34,7 +41,9 @@ namespace Field_Renting_System
 
         private void Insert()
         {
-            string connectionString = @"Data Source=MEHEDI\SQLEXPRESS01;Initial Catalog=testing_db;Integrated Security=True;Encrypt=False;";
+            // string connectionString = @"Data Source=MEHEDI\SQLEXPRESS01;Initial Catalog=testing_db;Integrated Security=True;Encrypt=False;";
+
+            string connectionString = @"Data Source=MAHIN;Initial Catalog=testing_db;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
 
             try
