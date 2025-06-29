@@ -19,7 +19,7 @@ namespace task
         public Dashboard(string userEmail)
         {
             this.userEmail = userEmail;
-            InitializeComponent(); // Ensure this is called to initialize the form components  
+            InitializeComponent();      // Ensure this is called to initialize the form components  
             RetrieveUserName();
             RetrieveUserDetails();
         }
@@ -361,6 +361,20 @@ namespace task
 
         private void button10_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //show rent records 
+
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panel19.SendToBack();
+            profilepanel.SendToBack();
 
         }
     }

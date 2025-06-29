@@ -58,6 +58,18 @@
     <Compile Include="bookingreq.Designer.cs">
       <DependentUpon>bookingreq.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDash.Designer.cs">
+      <DependentUpon>AdminDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +90,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rentrecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rentrecord.Designer.cs">
+      <DependentUpon>rentrecord.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="bookingreq.resx">
       <DependentUpon>bookingreq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDash.resx">
+      <DependentUpon>AdminDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginUser.resx">
       <DependentUpon>LoginUser.cs</DependentUpon>
@@ -97,6 +121,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rentrecord.resx">
+      <DependentUpon>rentrecord.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -166,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Screenshot 2025-06-28 163625.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rentfield.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

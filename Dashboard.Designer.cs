@@ -240,8 +240,9 @@ namespace task
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(202, 53);
             this.button6.TabIndex = 0;
-            this.button6.Text = "Rent Records";
+            this.button6.Text = "MainMenu";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel4
             // 
@@ -371,8 +372,9 @@ namespace task
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(280, 69);
             this.button8.TabIndex = 1;
-            this.button8.Text = "Booking Request List";
+            this.button8.Text = "Rent Records";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // pictureBox3
             // 
@@ -466,9 +468,9 @@ namespace task
             this.panel19.Controls.Add(this.update);
             this.panel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel19.ForeColor = System.Drawing.Color.Teal;
-            this.panel19.Location = new System.Drawing.Point(321, 649);
+            this.panel19.Location = new System.Drawing.Point(318, 588);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(798, 408);
+            this.panel19.Size = new System.Drawing.Size(798, 102);
             this.panel19.TabIndex = 5;
             this.panel19.Visible = false;
             this.panel19.Paint += new System.Windows.Forms.PaintEventHandler(this.panel19_Paint);
@@ -594,9 +596,9 @@ namespace task
             this.profilepanel.Controls.Add(this.pass);
             this.profilepanel.Controls.Add(this.Email);
             this.profilepanel.Controls.Add(this.age);
-            this.profilepanel.Location = new System.Drawing.Point(318, 633);
+            this.profilepanel.Location = new System.Drawing.Point(318, 543);
             this.profilepanel.Name = "profilepanel";
-            this.profilepanel.Size = new System.Drawing.Size(804, 10);
+            this.profilepanel.Size = new System.Drawing.Size(804, 123);
             this.profilepanel.TabIndex = 5;
             this.profilepanel.Visible = false;
             this.profilepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.profilepanel_Paint);
