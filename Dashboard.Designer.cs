@@ -415,7 +415,7 @@ namespace task
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(287, 84);
             this.button9.TabIndex = 5;
-            this.button9.Text = "Booked Records";
+            this.button9.Text = "View Booking Request";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -468,9 +468,9 @@ namespace task
             this.panel19.Controls.Add(this.update);
             this.panel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel19.ForeColor = System.Drawing.Color.Teal;
-            this.panel19.Location = new System.Drawing.Point(318, 588);
+            this.panel19.Location = new System.Drawing.Point(318, 633);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(798, 102);
+            this.panel19.Size = new System.Drawing.Size(798, 57);
             this.panel19.TabIndex = 5;
             this.panel19.Visible = false;
             this.panel19.Paint += new System.Windows.Forms.PaintEventHandler(this.panel19_Paint);
@@ -596,9 +596,9 @@ namespace task
             this.profilepanel.Controls.Add(this.pass);
             this.profilepanel.Controls.Add(this.Email);
             this.profilepanel.Controls.Add(this.age);
-            this.profilepanel.Location = new System.Drawing.Point(318, 543);
+            this.profilepanel.Location = new System.Drawing.Point(318, 609);
             this.profilepanel.Name = "profilepanel";
-            this.profilepanel.Size = new System.Drawing.Size(804, 123);
+            this.profilepanel.Size = new System.Drawing.Size(804, 57);
             this.profilepanel.TabIndex = 5;
             this.profilepanel.Visible = false;
             this.profilepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.profilepanel_Paint);

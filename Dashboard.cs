@@ -24,13 +24,13 @@ namespace task
             RetrieveUserDetails();
         }
 
-        
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             // No changes needed here  
         }
-        
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -192,12 +192,12 @@ namespace task
 
         private void panel11_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void RetrieveUserDetails()
@@ -218,7 +218,7 @@ namespace task
 
                     if (reader.Read())
                     {
-                  
+
 
                         Email.Text = reader["email"]?.ToString() ?? "Email not found.";
                         nid.Text = reader["nid"]?.ToString() ?? "NID not found.";
@@ -226,7 +226,7 @@ namespace task
                         age.Text = reader["age"]?.ToString() ?? "Age not found.";
                         gender.Text = reader["gender"]?.ToString() ?? "Gender not found.";
                         pass.Text = reader["password"]?.ToString() ?? "Password not found.";
-                      
+
                     }
                     else
                     {
@@ -317,7 +317,7 @@ namespace task
         private void button1_Click_1(object sender, EventArgs e)
         {
             profilepanel.SendToBack();
-           mainpanel.BringToFront();
+            mainpanel.BringToFront();
             panel19.SendToBack();
 
         }
@@ -336,7 +336,7 @@ namespace task
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            rentrecord r = new rentrecord(userEmail);
         }
 
         private void panel18_Paint(object sender, PaintEventArgs e)
@@ -346,6 +346,7 @@ namespace task
 
         private void button9_Click(object sender, EventArgs e)
         {
+            //see booking request
 
         }
 
@@ -361,13 +362,16 @@ namespace task
 
         private void button10_Click(object sender, EventArgs e)
         {
+            //payment
 
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             //show rent records 
-
+            rentrecord r = new rentrecord(userEmail);
+            r.Show();
+            this.Close(); // Close the current Dashboard form
 
         }
 

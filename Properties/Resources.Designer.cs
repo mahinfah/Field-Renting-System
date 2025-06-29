@@ -203,6 +203,16 @@ namespace Field_Renting_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap req {
+            get {
+                object obj = ResourceManager.GetObject("req", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2025_06_28_134153 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2025-06-28 134153", resourceCulture);
