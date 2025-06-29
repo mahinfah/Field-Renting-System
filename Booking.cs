@@ -136,6 +136,8 @@ public partial class Booking : Form
         {
             Dashboard f = new Dashboard(userEmail);
             f.Show();
+            this.Close();
+
         }
     }
 }

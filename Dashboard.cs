@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using Field_Renting_System;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Security.Cryptography.X509Certificates;
 namespace task
 {
     public partial class Dashboard : Form
@@ -155,7 +158,9 @@ namespace task
         {
             panel19.Visible = true;
             panel19.BringToFront();
-            profilepanel.SendToBack(); // Ensure profilepanel is sent to the back  
+            profilepanel.SendToBack();
+            mainpanel.SendToBack();
+            // Ensure profilepanel is sent to the back  
             RetrieveUserDetails();
         }
 
@@ -172,7 +177,7 @@ namespace task
         {
             this.Close(); // Close the current Dashboard form  
             LoginUser f = new LoginUser();
-            f.ShowDialog(); // Open Form1 as a dialog  
+            f.Show(); // Open Form1 as a dialog  
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -209,7 +214,7 @@ namespace task
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT email, nid, phoneno, age, gender, password FROM Table_reg WHERE email = @Email";
+                    string query = "SELECT name, email, nid, phoneno, age, gender, password FROM Table_reg WHERE email = @Email";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@Email", email);
 
@@ -218,15 +223,30 @@ namespace task
 
                     if (reader.Read())
                     {
+                        txtname.Text = reader["name"]?.ToString() ?? "Name not found.";
+                        txtemail.Text = reader["email"]?.ToString() ?? "Email not found.";
+                        txtnid.Text = reader["nid"]?.ToString() ?? "NID not found.";
+                        txtphone.Text = reader["phoneno"]?.ToString() ?? "Phone number not found.";
+                        txtage.Text = reader["age"]?.ToString() ?? "Age not found.";
+                        txtpass.Text = reader["password"]?.ToString() ?? "Password not found.";
 
-
+                        label6.Text = reader["name"]?.ToString() ?? "Name not found.";
                         Email.Text = reader["email"]?.ToString() ?? "Email not found.";
                         nid.Text = reader["nid"]?.ToString() ?? "NID not found.";
                         phoneno.Text = reader["phoneno"]?.ToString() ?? "Phone number not found.";
                         age.Text = reader["age"]?.ToString() ?? "Age not found.";
-                        gender.Text = reader["gender"]?.ToString() ?? "Gender not found.";
                         pass.Text = reader["password"]?.ToString() ?? "Password not found.";
 
+                        string genderValue = reader["gender"]?.ToString();
+                        gender.Text = genderValue ?? "Gender not found."; 
+                        if (genderValue == "Male")
+                        {
+                            Male.Checked = true;
+                        }
+                        else if (genderValue == "Female")
+                        {
+                            Female.Checked = true;
+                        }
                     }
                     else
                     {
@@ -257,8 +277,34 @@ namespace task
 
         }
 
+
         private void UpdateUserDetails()
         {
+            
+            string connectionString = @"Data Source=MAHIN;Initial Catalog=testing_db;Integrated Security=True";
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            string qq = "UPDATE Table_reg SET NAME='" + txtname.Text + "', PASSWORD='" + txtpass.Text + "', phoneno='" + txtphone.Text + "', NID='" + txtnid.Text + "', Age='" + txtage.Text + "' WHERE email='" + userEmail + "'";
+            SqlCommand cmd = new SqlCommand(qq, conn);
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("User details updated successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            Show();
+            clear();  
+        }
+
+        private void clear()
+        {
+            txtname.Clear();
+            txtemail.Clear();
+            txtnid.Clear();
+            txtphone.Clear();
+            txtage.Clear();
+            txtpass.Clear();
+           Male.Checked = false;
+            Female.Checked = false;
 
         }
 
@@ -377,6 +423,45 @@ namespace task
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            payment();
+        }
+
+
+        private void payment()
+        {
+            try
+            {
+                string connectionString = @"Data Source=MAHIN;Initial Catalog=testing_db;Integrated Security=True";
+                string email = userEmail;
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT SUM(fee) AS TotalFee FROM Table_approved WHERE email = @Email";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Email", email);
+
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        decimal totalFee = Convert.ToDecimal(result);
+                        MessageBox.Show($"Total fee for the user is: {totalFee}", "Payment Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No fee records found for the provided email.", "Payment Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

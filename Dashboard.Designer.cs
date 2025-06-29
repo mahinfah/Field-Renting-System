@@ -47,9 +47,6 @@ namespace task
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -60,6 +57,21 @@ namespace task
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.Male = new System.Windows.Forms.RadioButton();
+            this.Female = new System.Windows.Forms.RadioButton();
+            this.txtage = new System.Windows.Forms.TextBox();
+            this.txtnid = new System.Windows.Forms.TextBox();
+            this.txtphone = new System.Windows.Forms.TextBox();
+            this.txtpass = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -69,6 +81,13 @@ namespace task
             this.button1 = new System.Windows.Forms.Button();
             this.Update_btn = new System.Windows.Forms.Button();
             this.profilepanel = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.gender = new System.Windows.Forms.Label();
             this.nid = new System.Windows.Forms.Label();
@@ -77,21 +96,6 @@ namespace task
             this.Email = new System.Windows.Forms.Label();
             this.age = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtname = new System.Windows.Forms.TextBox();
-            this.txtemail = new System.Windows.Forms.TextBox();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.txtphone = new System.Windows.Forms.TextBox();
-            this.txtnid = new System.Windows.Forms.TextBox();
-            this.txtage = new System.Windows.Forms.TextBox();
-            this.Female = new System.Windows.Forms.RadioButton();
-            this.Male = new System.Windows.Forms.RadioButton();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,8 +105,6 @@ namespace task
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mainpanel.SuspendLayout();
-            this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
@@ -309,6 +311,7 @@ namespace task
             this.button5.TabIndex = 0;
             this.button5.Text = "Total Payment";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox1
             // 
@@ -322,8 +325,7 @@ namespace task
             // 
             // mainpanel
             // 
-            this.mainpanel.BackColor = System.Drawing.Color.SlateGray;
-            this.mainpanel.Controls.Add(this.panel13);
+            this.mainpanel.BackColor = System.Drawing.Color.LightSlateGray;
             this.mainpanel.Controls.Add(this.panel12);
             this.mainpanel.Controls.Add(this.panel11);
             this.mainpanel.Controls.Add(this.panel10);
@@ -333,47 +335,14 @@ namespace task
             this.mainpanel.TabIndex = 8;
             this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel13.Controls.Add(this.pictureBox5);
-            this.panel13.Controls.Add(this.button10);
-            this.panel13.Location = new System.Drawing.Point(119, 290);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(306, 258);
-            this.panel13.TabIndex = 1;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::Field_Renting_System.Properties.Resources.n;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(303, 190);
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.DarkCyan;
-            this.button10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.Window;
-            this.button10.Location = new System.Drawing.Point(0, 191);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(300, 64);
-            this.button10.TabIndex = 6;
-            this.button10.Text = "Notice";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel12.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel12.Controls.Add(this.button8);
             this.panel12.Controls.Add(this.pictureBox3);
-            this.panel12.Location = new System.Drawing.Point(472, 39);
+            this.panel12.Location = new System.Drawing.Point(434, 26);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(287, 229);
+            this.panel12.Size = new System.Drawing.Size(343, 271);
             this.panel12.TabIndex = 2;
             // 
             // button8
@@ -381,9 +350,9 @@ namespace task
             this.button8.BackColor = System.Drawing.Color.DarkCyan;
             this.button8.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.Window;
-            this.button8.Location = new System.Drawing.Point(3, 157);
+            this.button8.Location = new System.Drawing.Point(41, 167);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(280, 69);
+            this.button8.Size = new System.Drawing.Size(302, 69);
             this.button8.TabIndex = 1;
             this.button8.Text = "Rent Records";
             this.button8.UseVisualStyleBackColor = false;
@@ -392,30 +361,30 @@ namespace task
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::Field_Renting_System.Properties.Resources.logoq;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(39, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(281, 178);
+            this.pictureBox3.Size = new System.Drawing.Size(301, 164);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel11.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel11.Controls.Add(this.pictureBox4);
             this.panel11.Controls.Add(this.button9);
-            this.panel11.Location = new System.Drawing.Point(472, 290);
+            this.panel11.Location = new System.Drawing.Point(134, 297);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(286, 258);
+            this.panel11.Size = new System.Drawing.Size(565, 270);
             this.panel11.TabIndex = 1;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImage = global::Field_Renting_System.Properties.Resources.lll;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(136, 1);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(280, 195);
+            this.pictureBox4.Size = new System.Drawing.Size(322, 180);
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
@@ -424,9 +393,9 @@ namespace task
             this.button9.BackColor = System.Drawing.Color.DarkCyan;
             this.button9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.Window;
-            this.button9.Location = new System.Drawing.Point(3, 174);
+            this.button9.Location = new System.Drawing.Point(136, 167);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(287, 84);
+            this.button9.Size = new System.Drawing.Size(322, 84);
             this.button9.TabIndex = 5;
             this.button9.Text = "View Booking Request";
             this.button9.UseVisualStyleBackColor = false;
@@ -434,12 +403,12 @@ namespace task
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel10.Controls.Add(this.button3);
             this.panel10.Controls.Add(this.pictureBox2);
-            this.panel10.Location = new System.Drawing.Point(119, 39);
+            this.panel10.Location = new System.Drawing.Point(61, 26);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(306, 226);
+            this.panel10.Size = new System.Drawing.Size(367, 269);
             this.panel10.TabIndex = 0;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
@@ -448,9 +417,9 @@ namespace task
             this.button3.BackColor = System.Drawing.Color.DarkCyan;
             this.button3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(3, 151);
+            this.button3.Location = new System.Drawing.Point(28, 155);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(306, 72);
+            this.button3.Size = new System.Drawing.Size(306, 83);
             this.button3.TabIndex = 0;
             this.button3.Text = "Rent Your Field";
             this.button3.UseVisualStyleBackColor = false;
@@ -459,9 +428,9 @@ namespace task
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::Field_Renting_System.Properties.Resources.rent3;
-            this.pictureBox2.Location = new System.Drawing.Point(44, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(33, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(249, 178);
+            this.pictureBox2.Size = new System.Drawing.Size(301, 178);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
@@ -500,6 +469,148 @@ namespace task
             this.panel19.TabIndex = 5;
             this.panel19.Visible = false;
             this.panel19.Paint += new System.Windows.Forms.PaintEventHandler(this.panel19_Paint);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label17.Location = new System.Drawing.Point(217, 456);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 25);
+            this.label17.TabIndex = 30;
+            this.label17.Text = "Gender";
+            // 
+            // Male
+            // 
+            this.Male.AutoSize = true;
+            this.Male.BackColor = System.Drawing.Color.MintCream;
+            this.Male.Location = new System.Drawing.Point(403, 452);
+            this.Male.Name = "Male";
+            this.Male.Size = new System.Drawing.Size(80, 29);
+            this.Male.TabIndex = 29;
+            this.Male.TabStop = true;
+            this.Male.Text = "Male";
+            this.Male.UseVisualStyleBackColor = false;
+            this.Male.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // Female
+            // 
+            this.Female.AutoSize = true;
+            this.Female.BackColor = System.Drawing.Color.MintCream;
+            this.Female.Location = new System.Drawing.Point(580, 452);
+            this.Female.Name = "Female";
+            this.Female.Size = new System.Drawing.Size(102, 29);
+            this.Female.TabIndex = 28;
+            this.Female.TabStop = true;
+            this.Female.Text = "Female";
+            this.Female.UseVisualStyleBackColor = false;
+            this.Female.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // txtage
+            // 
+            this.txtage.Location = new System.Drawing.Point(381, 387);
+            this.txtage.Name = "txtage";
+            this.txtage.Size = new System.Drawing.Size(328, 30);
+            this.txtage.TabIndex = 27;
+            // 
+            // txtnid
+            // 
+            this.txtnid.Location = new System.Drawing.Point(381, 322);
+            this.txtnid.Name = "txtnid";
+            this.txtnid.Size = new System.Drawing.Size(328, 30);
+            this.txtnid.TabIndex = 26;
+            this.txtnid.TextChanged += new System.EventHandler(this.txtnid_TextChanged);
+            // 
+            // txtphone
+            // 
+            this.txtphone.Location = new System.Drawing.Point(381, 249);
+            this.txtphone.Name = "txtphone";
+            this.txtphone.Size = new System.Drawing.Size(328, 30);
+            this.txtphone.TabIndex = 25;
+            // 
+            // txtpass
+            // 
+            this.txtpass.Location = new System.Drawing.Point(381, 184);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(328, 30);
+            this.txtpass.TabIndex = 24;
+            // 
+            // txtemail
+            // 
+            this.txtemail.Location = new System.Drawing.Point(381, 111);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(328, 30);
+            this.txtemail.TabIndex = 23;
+            // 
+            // txtname
+            // 
+            this.txtname.Location = new System.Drawing.Point(381, 39);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(328, 30);
+            this.txtname.TabIndex = 22;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label16.Location = new System.Drawing.Point(229, 387);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(48, 25);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "Age";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label15.Location = new System.Drawing.Point(229, 327);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(41, 25);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Nid";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label14.Location = new System.Drawing.Point(205, 249);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(96, 25);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Phone no";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label13.Location = new System.Drawing.Point(205, 184);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 25);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Password";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label12.Location = new System.Drawing.Point(217, 111);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 25);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Email";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label5.Location = new System.Drawing.Point(213, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 25);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Name";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label11
             // 
@@ -569,9 +680,9 @@ namespace task
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(492, 517);
+            this.button1.Location = new System.Drawing.Point(475, 517);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 46);
+            this.button1.Size = new System.Drawing.Size(136, 53);
             this.button1.TabIndex = 8;
             this.button1.Text = "Dashboard";
             this.button1.UseVisualStyleBackColor = true;
@@ -590,6 +701,13 @@ namespace task
             // profilepanel
             // 
             this.profilepanel.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.profilepanel.Controls.Add(this.label24);
+            this.profilepanel.Controls.Add(this.label23);
+            this.profilepanel.Controls.Add(this.label22);
+            this.profilepanel.Controls.Add(this.label21);
+            this.profilepanel.Controls.Add(this.label20);
+            this.profilepanel.Controls.Add(this.label19);
+            this.profilepanel.Controls.Add(this.label18);
             this.profilepanel.Controls.Add(this.label6);
             this.profilepanel.Controls.Add(this.gender);
             this.profilepanel.Controls.Add(this.nid);
@@ -597,19 +715,96 @@ namespace task
             this.profilepanel.Controls.Add(this.pass);
             this.profilepanel.Controls.Add(this.Email);
             this.profilepanel.Controls.Add(this.age);
-            this.profilepanel.Location = new System.Drawing.Point(318, 609);
+            this.profilepanel.Location = new System.Drawing.Point(318, 82);
             this.profilepanel.Name = "profilepanel";
-            this.profilepanel.Size = new System.Drawing.Size(804, 57);
+            this.profilepanel.Size = new System.Drawing.Size(804, 584);
             this.profilepanel.TabIndex = 5;
             this.profilepanel.Visible = false;
             this.profilepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.profilepanel_Paint);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label24.Location = new System.Drawing.Point(237, 424);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(94, 21);
+            this.label24.TabIndex = 14;
+            this.label24.Text = "Gender  :";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label23.Location = new System.Drawing.Point(245, 371);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(86, 21);
+            this.label23.TabIndex = 13;
+            this.label23.Text = "Nid      :";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label22.Location = new System.Drawing.Point(245, 319);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(83, 21);
+            this.label22.TabIndex = 12;
+            this.label22.Text = "Age     :";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label21.Location = new System.Drawing.Point(230, 265);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(101, 21);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "Number  :";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label20.Location = new System.Drawing.Point(218, 209);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(114, 21);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Password  :";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label19.Location = new System.Drawing.Point(230, 153);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(101, 21);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Email     :";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label18.Location = new System.Drawing.Point(232, 105);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(99, 21);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "Name     :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(457, 98);
+            this.label6.Location = new System.Drawing.Point(450, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 28);
             this.label6.TabIndex = 7;
@@ -619,7 +814,7 @@ namespace task
             // 
             this.gender.AutoSize = true;
             this.gender.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender.Location = new System.Drawing.Point(457, 415);
+            this.gender.Location = new System.Drawing.Point(439, 418);
             this.gender.Name = "gender";
             this.gender.Size = new System.Drawing.Size(77, 28);
             this.gender.TabIndex = 6;
@@ -629,7 +824,7 @@ namespace task
             // 
             this.nid.AutoSize = true;
             this.nid.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nid.Location = new System.Drawing.Point(457, 366);
+            this.nid.Location = new System.Drawing.Point(453, 366);
             this.nid.Name = "nid";
             this.nid.Size = new System.Drawing.Size(41, 28);
             this.nid.TabIndex = 5;
@@ -639,7 +834,7 @@ namespace task
             // 
             this.phoneno.AutoSize = true;
             this.phoneno.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneno.Location = new System.Drawing.Point(458, 254);
+            this.phoneno.Location = new System.Drawing.Point(450, 258);
             this.phoneno.Name = "phoneno";
             this.phoneno.Size = new System.Drawing.Size(95, 28);
             this.phoneno.TabIndex = 4;
@@ -650,7 +845,7 @@ namespace task
             // 
             this.pass.AutoSize = true;
             this.pass.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass.Location = new System.Drawing.Point(458, 202);
+            this.pass.Location = new System.Drawing.Point(450, 203);
             this.pass.Name = "pass";
             this.pass.Size = new System.Drawing.Size(52, 28);
             this.pass.TabIndex = 3;
@@ -660,7 +855,7 @@ namespace task
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(458, 147);
+            this.Email.Location = new System.Drawing.Point(450, 153);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(60, 28);
             this.Email.TabIndex = 2;
@@ -671,7 +866,7 @@ namespace task
             // 
             this.age.AutoSize = true;
             this.age.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.age.Location = new System.Drawing.Point(457, 312);
+            this.age.Location = new System.Drawing.Point(453, 312);
             this.age.Name = "age";
             this.age.Size = new System.Drawing.Size(45, 28);
             this.age.TabIndex = 1;
@@ -685,148 +880,6 @@ namespace task
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(801, 61);
             this.panel9.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label5.Location = new System.Drawing.Point(213, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 25);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Name";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label12.Location = new System.Drawing.Point(217, 111);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 25);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Email";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label13.Location = new System.Drawing.Point(205, 184);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 25);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Password";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label14.Location = new System.Drawing.Point(205, 249);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 25);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Phone no";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label15.Location = new System.Drawing.Point(236, 327);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 25);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "Nid";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label16.Location = new System.Drawing.Point(229, 387);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 25);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "Age";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // txtname
-            // 
-            this.txtname.Location = new System.Drawing.Point(381, 39);
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(328, 30);
-            this.txtname.TabIndex = 22;
-            // 
-            // txtemail
-            // 
-            this.txtemail.Location = new System.Drawing.Point(381, 111);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(328, 30);
-            this.txtemail.TabIndex = 23;
-            // 
-            // txtpass
-            // 
-            this.txtpass.Location = new System.Drawing.Point(381, 184);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(328, 30);
-            this.txtpass.TabIndex = 24;
-            // 
-            // txtphone
-            // 
-            this.txtphone.Location = new System.Drawing.Point(381, 249);
-            this.txtphone.Name = "txtphone";
-            this.txtphone.Size = new System.Drawing.Size(328, 30);
-            this.txtphone.TabIndex = 25;
-            // 
-            // txtnid
-            // 
-            this.txtnid.Location = new System.Drawing.Point(381, 322);
-            this.txtnid.Name = "txtnid";
-            this.txtnid.Size = new System.Drawing.Size(328, 30);
-            this.txtnid.TabIndex = 26;
-            this.txtnid.TextChanged += new System.EventHandler(this.txtnid_TextChanged);
-            // 
-            // txtage
-            // 
-            this.txtage.Location = new System.Drawing.Point(381, 387);
-            this.txtage.Name = "txtage";
-            this.txtage.Size = new System.Drawing.Size(328, 30);
-            this.txtage.TabIndex = 27;
-            // 
-            // Female
-            // 
-            this.Female.AutoSize = true;
-            this.Female.BackColor = System.Drawing.Color.MintCream;
-            this.Female.Location = new System.Drawing.Point(580, 452);
-            this.Female.Name = "Female";
-            this.Female.Size = new System.Drawing.Size(102, 29);
-            this.Female.TabIndex = 28;
-            this.Female.TabStop = true;
-            this.Female.Text = "Female";
-            this.Female.UseVisualStyleBackColor = false;
-            this.Female.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // Male
-            // 
-            this.Male.AutoSize = true;
-            this.Male.BackColor = System.Drawing.Color.MintCream;
-            this.Male.Location = new System.Drawing.Point(403, 452);
-            this.Male.Name = "Male";
-            this.Male.Size = new System.Drawing.Size(80, 29);
-            this.Male.TabIndex = 29;
-            this.Male.TabStop = true;
-            this.Male.Text = "Male";
-            this.Male.UseVisualStyleBackColor = false;
-            this.Male.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label17.Location = new System.Drawing.Point(236, 447);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 25);
-            this.label17.TabIndex = 30;
-            this.label17.Text = "Gender";
             // 
             // Dashboard
             // 
@@ -852,8 +905,6 @@ namespace task
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainpanel.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel11.ResumeLayout(false);
@@ -899,7 +950,6 @@ namespace task
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
@@ -919,9 +969,7 @@ namespace task
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -943,5 +991,12 @@ namespace task
         private System.Windows.Forms.RadioButton Female;
         private System.Windows.Forms.RadioButton Male;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
     }
 }
