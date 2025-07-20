@@ -315,6 +315,7 @@ namespace task
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(34, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 271);
@@ -715,9 +716,9 @@ namespace task
             this.profilepanel.Controls.Add(this.pass);
             this.profilepanel.Controls.Add(this.Email);
             this.profilepanel.Controls.Add(this.age);
-            this.profilepanel.Location = new System.Drawing.Point(318, 82);
+            this.profilepanel.Location = new System.Drawing.Point(318, 79);
             this.profilepanel.Name = "profilepanel";
-            this.profilepanel.Size = new System.Drawing.Size(804, 584);
+            this.profilepanel.Size = new System.Drawing.Size(804, 587);
             this.profilepanel.TabIndex = 5;
             this.profilepanel.Visible = false;
             this.profilepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.profilepanel_Paint);

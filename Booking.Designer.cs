@@ -117,6 +117,7 @@
             this.Controls.Add(this.Bookbtn);
             this.Controls.Add(this.searchbtn);
             this.Name = "Booking";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

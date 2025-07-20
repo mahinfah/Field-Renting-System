@@ -16,6 +16,11 @@ namespace Field_Renting_System
     {
         private string name, password, email, nid, phone;
 
+        private void SellerReg_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             AdminDash a= new AdminDash();
@@ -50,7 +55,7 @@ namespace Field_Renting_System
             {
                 conn.Open();
 
-                // ⚠️ This is vulnerable to SQL Injection. Use with caution!
+               
                 string q = "INSERT INTO Table_Seller (S_Name, S_Password, S_Email, S_NID, S_Phone) " +
                            "VALUES ('" + name + "', '" + password + "', '" + email + "', '" + nid + "', '" + phone + "')";
 

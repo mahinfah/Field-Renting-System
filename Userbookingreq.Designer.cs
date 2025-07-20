@@ -80,7 +80,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Userbookingreq";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Userbookingreq";
+            this.Load += new System.EventHandler(this.Userbookingreq_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

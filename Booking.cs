@@ -64,9 +64,9 @@ public partial class Booking : Form
                     DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                     string fieldId = selectedRow.Cells["field_id"].Value.ToString();
                     string fieldName = selectedRow.Cells["field_name"].Value.ToString();
-                    string fieldType = selectedRow.Cells["field_type"].Value.ToString(); // e.g., "football"
-                    string location = selectedRow.Cells["location"].Value.ToString();    // e.g., "uttara"
-                    float fee = Convert.ToSingle(selectedRow.Cells["fee"].Value);        // e.g., 3500
+                    string fieldType = selectedRow.Cells["field_type"].Value.ToString(); 
+                    string location = selectedRow.Cells["location"].Value.ToString();   
+                    float fee = Convert.ToSingle(selectedRow.Cells["fee"].Value);      
                     string slots = selectedRow.Cells["slots"].Value.ToString();
 
                     // Insert into Table_bookingreq  

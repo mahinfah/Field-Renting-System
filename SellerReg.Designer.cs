@@ -32,6 +32,7 @@ namespace Field_Renting_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.TbName = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.TbPhone = new System.Windows.Forms.TextBox();
@@ -44,13 +45,12 @@ namespace Field_Renting_System
             this.LbPass = new System.Windows.Forms.Label();
             this.LbName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.TbName);
             this.panel1.Controls.Add(this.btnSubmit);
@@ -63,11 +63,22 @@ namespace Field_Renting_System
             this.panel1.Controls.Add(this.LbEmail);
             this.panel1.Controls.Add(this.LbPass);
             this.panel1.Controls.Add(this.LbName);
-            this.panel1.Location = new System.Drawing.Point(264, 118);
+            this.panel1.Location = new System.Drawing.Point(319, 117);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(505, 525);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(174, 458);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 43);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TbName
             // 
@@ -181,29 +192,19 @@ namespace Field_Renting_System
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label6.Location = new System.Drawing.Point(307, 26);
+            this.label6.Font = new System.Drawing.Font("Agency FB", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightCyan;
+            this.label6.Location = new System.Drawing.Point(402, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(460, 70);
+            this.label6.Size = new System.Drawing.Size(360, 62);
             this.label6.TabIndex = 5;
             this.label6.Text = "Seller Registration";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(174, 458);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 43);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SellerReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Field_Renting_System.Properties.Resources.full_campus_view_from_stadium;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1105, 754);
             this.Controls.Add(this.label6);
@@ -212,6 +213,7 @@ namespace Field_Renting_System
             this.Name = "SellerReg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADD SELLER";
+            this.Load += new System.EventHandler(this.SellerReg_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

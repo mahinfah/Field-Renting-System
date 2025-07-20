@@ -64,7 +64,7 @@ namespace Field_Renting_System
 
         }
         
-private void check()
+void check()
         {
             string email = textBox_email.Text;
             string password = textBox_password.Text;
@@ -106,7 +106,7 @@ private void check()
                     else if (Seller.Checked)
                     {
                         // Check seller credentials  
-                        query = "SELECT Email FROM Seller_table WHERE Email=@Email AND password=@Password";
+                        query = "SELECT S_Email FROM Table_Seller WHERE S_Email=@Email AND S_password=@Password";
                     }
 
                     if (!string.IsNullOrEmpty(query))
@@ -118,9 +118,19 @@ private void check()
 
                         if (reader.Read())
                         {
-                            string userEmail = reader["Email"].ToString();
-                            Dashboard form2 = new Dashboard(userEmail);
-                            form2.Show();
+                            string userEmail = reader["Email"] != DBNull.Value ? reader["Email"].ToString() : reader["S_Email"].ToString();
+
+                            if (buyer.Checked)
+                            {
+                                Dashboard form2 = new Dashboard(userEmail);
+                                form2.Show();
+                            }
+                            else if (Seller.Checked)
+                            {
+                                seller_home form2 = new seller_home();
+                                form2.Show();
+                            }
+
                             this.Hide();
                         }
                         else

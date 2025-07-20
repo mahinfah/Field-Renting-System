@@ -22,9 +22,8 @@ namespace Field_Renting_System
         public rentrecord(string userEmail)
         {
             this.userEmail = userEmail;
-            InitializeComponent();      // Ensure this is called to initialize the form components  
-        //    RetrieveUserName();
-          //  RetrieveUserDetails();
+            InitializeComponent();     
+      
         }
 
 
@@ -46,7 +45,7 @@ namespace Field_Renting_System
                 string q = "SELECT * FROM Table_approved WHERE email = @userEmail";
                 using (SqlCommand cmd = new SqlCommand(q, conn))
                 {
-                    cmd.Parameters.AddWithValue("@userEmail", userEmail); // Use the userEmail field to pass the email parameter  
+                    cmd.Parameters.AddWithValue("@userEmail", userEmail);  
                     SqlDataAdapter adp = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     adp.Fill(ds);

@@ -63,6 +63,56 @@ namespace Field_Renting_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3135715__1_ {
+            get {
+                object obj = ResourceManager.GetObject("3135715 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_the_uploaded_im__1_ {
+            get {
+                object obj = ResourceManager.GetObject("edit the uploaded im (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_campus_view_from_stadium {
+            get {
+                object obj = ResourceManager.GetObject("full_campus_view_from_stadium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grass_optimized {
+            get {
+                object obj = ResourceManager.GetObject("grass_optimized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_2025_06_30_091953621_optimized {
+            get {
+                object obj = ResourceManager.GetObject("image_2025-06-30_091953621_optimized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lll {
             get {
                 object obj = ResourceManager.GetObject("lll", resourceCulture);
@@ -116,6 +166,46 @@ namespace Field_Renting_System.Properties {
         internal static System.Drawing.Bitmap main2 {
             get {
                 object obj = ResourceManager.GetObject("main2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Make_it_Ghibli_style_1_ {
+            get {
+                object obj = ResourceManager.GetObject("Make it Ghibli style(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap make_the_picture_ghi__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("make the picture ghi (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Make_the_uploaded_im_1_optimized {
+            get {
+                object obj = ResourceManager.GetObject("Make_the_uploaded_im_1_optimized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Make_the_uploaded_im_1_optimized1 {
+            get {
+                object obj = ResourceManager.GetObject("Make_the_uploaded_im_1_optimized1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +323,16 @@ namespace Field_Renting_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search__1_ {
+            get {
+                object obj = ResourceManager.GetObject("search (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap update {
             get {
                 object obj = ResourceManager.GetObject("update", resourceCulture);
@@ -246,6 +346,16 @@ namespace Field_Renting_System.Properties {
         internal static System.Drawing.Bitmap view {
             get {
                 object obj = ResourceManager.GetObject("view", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap You_made_the_image_v_optimized {
+            get {
+                object obj = ResourceManager.GetObject("You_made_the_image_v_optimized", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

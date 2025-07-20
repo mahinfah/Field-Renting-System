@@ -32,7 +32,7 @@ namespace Field_Renting_System
         {
            //// SellerReg sellerRegForm = new SellerReg(); // Create an instance of SellerReg form
          //   sellerRegForm.Show(); // Show the SellerReg form
-            MessageBox.Show("Added Seller Clicked");
+           // MessageBox.Show("Added Seller Clicked");
             SellerReg eee = new SellerReg();
             eee.Show();
             this.Hide();
@@ -46,8 +46,8 @@ namespace Field_Renting_System
         private void BtnSField_Click(object sender, EventArgs e)
         {//
           //  MessageBox.Show("Search Field Clicked");
-          LoginUser e = new LoginUser();
-            e.Show();
+          LoginUser eeee = new LoginUser();
+            eeee.Show();
             this.Hide(); // Hide the current form
 
 
@@ -55,7 +55,12 @@ namespace Field_Renting_System
 
         private void btnABuyer_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("View All Buyers Clicked");
+            //MessageBox.Show("View All Buyers Clicked");
+            Registration n = new Registration();
+            n.Show();
+            this.Close();
+
+
         }
 
         private void btnDBuyer_Click(object sender, EventArgs e)
@@ -70,7 +75,10 @@ namespace Field_Renting_System
 
         private void btnAField_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Add Field Clicked");
+          //  MessageBox.Show("Add Field Clicked");
+          add_fld add = new add_fld();
+            add.Show();
+            this.Hide(); // Hide the current form
         }
 
         private void btnDField_Click(object sender, EventArgs e)
@@ -97,8 +105,25 @@ namespace Field_Renting_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            seller_info bn = new seller_info();
+            bn.Show();
+            this.Hide(); // Hide the current form
 
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Adminuserupdate adminuserupdate = new Adminuserupdate();
+            adminuserupdate.Show();
+            this.Hide(); // Hide the current form
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listed_fields f = new listed_fields();
+            f.Show();
+            this.Close();
 
         }
     }

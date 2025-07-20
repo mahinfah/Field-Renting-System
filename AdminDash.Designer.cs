@@ -34,21 +34,19 @@ namespace Field_Renting_System
             this.SellerManagement = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.GBoxAllBuyers = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.GBoxAllField = new System.Windows.Forms.GroupBox();
-            this.GBoxTotalPayment = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUField = new System.Windows.Forms.Button();
-            this.btnDField = new System.Windows.Forms.Button();
             this.btnAField = new System.Windows.Forms.Button();
-            this.btnUBuyer = new System.Windows.Forms.Button();
-            this.btnSBuyer = new System.Windows.Forms.Button();
-            this.btnDBuyer = new System.Windows.Forms.Button();
             this.btnABuyer = new System.Windows.Forms.Button();
             this.btnASeller = new System.Windows.Forms.Button();
             this.btnSField = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.SellerManagement.SuspendLayout();
+            this.GBoxAllBuyers.SuspendLayout();
+            this.GBoxAllField.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +94,7 @@ namespace Field_Renting_System
             // GBoxAllBuyers
             // 
             this.GBoxAllBuyers.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.GBoxAllBuyers.Controls.Add(this.button2);
             this.GBoxAllBuyers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBoxAllBuyers.Location = new System.Drawing.Point(406, 48);
             this.GBoxAllBuyers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -104,12 +103,23 @@ namespace Field_Renting_System
             this.GBoxAllBuyers.Size = new System.Drawing.Size(302, 162);
             this.GBoxAllBuyers.TabIndex = 2;
             this.GBoxAllBuyers.TabStop = false;
-            this.GBoxAllBuyers.Text = "View All Buyers";
+            this.GBoxAllBuyers.Text = "Buyers Management";
             this.GBoxAllBuyers.Enter += new System.EventHandler(this.GBoxAllBuyers_Enter);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 43);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(290, 116);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Manage Buyers";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // GBoxAllField
             // 
             this.GBoxAllField.BackColor = System.Drawing.Color.Violet;
+            this.GBoxAllField.Controls.Add(this.button3);
             this.GBoxAllField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBoxAllField.Location = new System.Drawing.Point(60, 235);
             this.GBoxAllField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -121,29 +131,10 @@ namespace Field_Renting_System
             this.GBoxAllField.Text = "View All Fields";
             this.GBoxAllField.Enter += new System.EventHandler(this.GBoxAllField_Enter);
             // 
-            // GBoxTotalPayment
-            // 
-            this.GBoxTotalPayment.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.GBoxTotalPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBoxTotalPayment.Location = new System.Drawing.Point(406, 235);
-            this.GBoxTotalPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GBoxTotalPayment.Name = "GBoxTotalPayment";
-            this.GBoxTotalPayment.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GBoxTotalPayment.Size = new System.Drawing.Size(302, 154);
-            this.GBoxTotalPayment.TabIndex = 2;
-            this.GBoxTotalPayment.TabStop = false;
-            this.GBoxTotalPayment.Text = "Total Payment";
-            this.GBoxTotalPayment.Enter += new System.EventHandler(this.GBoxTotalPayment_Enter);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Controls.Add(this.btnUField);
-            this.panel1.Controls.Add(this.btnDField);
             this.panel1.Controls.Add(this.btnAField);
-            this.panel1.Controls.Add(this.btnUBuyer);
-            this.panel1.Controls.Add(this.btnSBuyer);
-            this.panel1.Controls.Add(this.btnDBuyer);
             this.panel1.Controls.Add(this.btnABuyer);
             this.panel1.Controls.Add(this.btnASeller);
             this.panel1.Controls.Add(this.btnSField);
@@ -153,99 +144,28 @@ namespace Field_Renting_System
             this.panel1.Size = new System.Drawing.Size(270, 458);
             this.panel1.TabIndex = 3;
             // 
-            // btnUField
-            // 
-            this.btnUField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUField.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUField.Location = new System.Drawing.Point(39, 141);
-            this.btnUField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUField.Name = "btnUField";
-            this.btnUField.Size = new System.Drawing.Size(144, 35);
-            this.btnUField.TabIndex = 13;
-            this.btnUField.Text = "Update Field";
-            this.btnUField.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnUField.UseVisualStyleBackColor = true;
-            this.btnUField.Click += new System.EventHandler(this.btnUField_Click);
-            // 
-            // btnDField
-            // 
-            this.btnDField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDField.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDField.Location = new System.Drawing.Point(39, 365);
-            this.btnDField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDField.Name = "btnDField";
-            this.btnDField.Size = new System.Drawing.Size(144, 35);
-            this.btnDField.TabIndex = 12;
-            this.btnDField.Text = "Delete Field";
-            this.btnDField.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDField.UseVisualStyleBackColor = true;
-            this.btnDField.Click += new System.EventHandler(this.btnDField_Click);
-            // 
             // btnAField
             // 
             this.btnAField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAField.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAField.Location = new System.Drawing.Point(39, 322);
+            this.btnAField.Location = new System.Drawing.Point(39, 259);
             this.btnAField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAField.Name = "btnAField";
-            this.btnAField.Size = new System.Drawing.Size(144, 35);
+            this.btnAField.Size = new System.Drawing.Size(144, 70);
             this.btnAField.TabIndex = 11;
             this.btnAField.Text = "Add Field";
             this.btnAField.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnAField.UseVisualStyleBackColor = true;
             this.btnAField.Click += new System.EventHandler(this.btnAField_Click);
             // 
-            // btnUBuyer
-            // 
-            this.btnUBuyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUBuyer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUBuyer.Location = new System.Drawing.Point(39, 269);
-            this.btnUBuyer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUBuyer.Name = "btnUBuyer";
-            this.btnUBuyer.Size = new System.Drawing.Size(144, 35);
-            this.btnUBuyer.TabIndex = 10;
-            this.btnUBuyer.Text = "Update Buyers";
-            this.btnUBuyer.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnUBuyer.UseVisualStyleBackColor = true;
-            this.btnUBuyer.Click += new System.EventHandler(this.btnUBuyer_Click);
-            // 
-            // btnSBuyer
-            // 
-            this.btnSBuyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSBuyer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSBuyer.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSBuyer.Location = new System.Drawing.Point(39, 84);
-            this.btnSBuyer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSBuyer.Name = "btnSBuyer";
-            this.btnSBuyer.Size = new System.Drawing.Size(144, 50);
-            this.btnSBuyer.TabIndex = 6;
-            this.btnSBuyer.Text = "Search Buyer";
-            this.btnSBuyer.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSBuyer.UseVisualStyleBackColor = true;
-            this.btnSBuyer.Click += new System.EventHandler(this.BtnSBuyer_Click);
-            // 
-            // btnDBuyer
-            // 
-            this.btnDBuyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDBuyer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDBuyer.Location = new System.Drawing.Point(39, 226);
-            this.btnDBuyer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDBuyer.Name = "btnDBuyer";
-            this.btnDBuyer.Size = new System.Drawing.Size(144, 35);
-            this.btnDBuyer.TabIndex = 9;
-            this.btnDBuyer.Text = "Delete Buyers";
-            this.btnDBuyer.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDBuyer.UseVisualStyleBackColor = true;
-            this.btnDBuyer.Click += new System.EventHandler(this.btnDBuyer_Click);
-            // 
             // btnABuyer
             // 
             this.btnABuyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnABuyer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnABuyer.Location = new System.Drawing.Point(39, 184);
+            this.btnABuyer.Location = new System.Drawing.Point(39, 148);
             this.btnABuyer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnABuyer.Name = "btnABuyer";
-            this.btnABuyer.Size = new System.Drawing.Size(144, 35);
+            this.btnABuyer.Size = new System.Drawing.Size(144, 79);
             this.btnABuyer.TabIndex = 8;
             this.btnABuyer.Text = "Add Buyers";
             this.btnABuyer.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -256,10 +176,10 @@ namespace Field_Renting_System
             // 
             this.btnASeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnASeller.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnASeller.Location = new System.Drawing.Point(39, 18);
+            this.btnASeller.Location = new System.Drawing.Point(39, 48);
             this.btnASeller.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnASeller.Name = "btnASeller";
-            this.btnASeller.Size = new System.Drawing.Size(144, 58);
+            this.btnASeller.Size = new System.Drawing.Size(144, 72);
             this.btnASeller.TabIndex = 5;
             this.btnASeller.Text = "Add Seller";
             this.btnASeller.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -270,10 +190,10 @@ namespace Field_Renting_System
             // 
             this.btnSField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSField.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSField.Location = new System.Drawing.Point(39, 408);
+            this.btnSField.Location = new System.Drawing.Point(39, 363);
             this.btnSField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSField.Name = "btnSField";
-            this.btnSField.Size = new System.Drawing.Size(144, 35);
+            this.btnSField.Size = new System.Drawing.Size(144, 77);
             this.btnSField.TabIndex = 7;
             this.btnSField.Text = "Log Out";
             this.btnSField.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -295,18 +215,28 @@ namespace Field_Renting_System
             this.panel3.Controls.Add(this.SellerManagement);
             this.panel3.Controls.Add(this.GBoxAllField);
             this.panel3.Controls.Add(this.GBoxAllBuyers);
-            this.panel3.Controls.Add(this.GBoxTotalPayment);
             this.panel3.Location = new System.Drawing.Point(286, 196);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(801, 461);
             this.panel3.TabIndex = 5;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(16, 36);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(272, 111);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Manage Fields";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // AdminDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.BackgroundImage = global::Field_Renting_System.Properties.Resources.full_campus_view_from_stadium;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1105, 754);
             this.Controls.Add(this.panel1);
@@ -319,6 +249,8 @@ namespace Field_Renting_System
             this.Text = "AdminDashboard";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SellerManagement.ResumeLayout(false);
+            this.GBoxAllBuyers.ResumeLayout(false);
+            this.GBoxAllField.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -332,20 +264,16 @@ namespace Field_Renting_System
         private System.Windows.Forms.GroupBox SellerManagement;
         private System.Windows.Forms.GroupBox GBoxAllBuyers;
         private System.Windows.Forms.GroupBox GBoxAllField;
-        private System.Windows.Forms.GroupBox GBoxTotalPayment;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnASeller;
-        private System.Windows.Forms.Button btnSBuyer;
         private System.Windows.Forms.Button btnSField;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnUField;
-        private System.Windows.Forms.Button btnDField;
         private System.Windows.Forms.Button btnAField;
-        private System.Windows.Forms.Button btnUBuyer;
-        private System.Windows.Forms.Button btnDBuyer;
         private System.Windows.Forms.Button btnABuyer;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

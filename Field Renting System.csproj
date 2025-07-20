@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_fld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_fld.Designer.cs">
+      <DependentUpon>add_fld.cs</DependentUpon>
+    </Compile>
     <Compile Include="Booking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,18 @@
     </Compile>
     <Compile Include="AdminDash.Designer.cs">
       <DependentUpon>AdminDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adminuserupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adminuserupdate.Designer.cs">
+      <DependentUpon>Adminuserupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listed_fields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listed_fields.Designer.cs">
+      <DependentUpon>listed_fields.cs</DependentUpon>
     </Compile>
     <Compile Include="SellerReg.cs">
       <SubType>Form</SubType>
@@ -96,12 +114,33 @@
     <Compile Include="rentrecord.Designer.cs">
       <DependentUpon>rentrecord.cs</DependentUpon>
     </Compile>
+    <Compile Include="seller_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seller_home.Designer.cs">
+      <DependentUpon>seller_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seller_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seller_info.Designer.cs">
+      <DependentUpon>seller_info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Userbookingreq.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Userbookingreq.Designer.cs">
       <DependentUpon>Userbookingreq.cs</DependentUpon>
     </Compile>
+    <Compile Include="view_Table_approved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_Table_approved.Designer.cs">
+      <DependentUpon>view_Table_approved.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_fld.resx">
+      <DependentUpon>add_fld.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDash.resx">
       <DependentUpon>AdminDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adminuserupdate.resx">
+      <DependentUpon>Adminuserupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listed_fields.resx">
+      <DependentUpon>listed_fields.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SellerReg.resx">
       <DependentUpon>SellerReg.cs</DependentUpon>
@@ -131,8 +176,17 @@
     <EmbeddedResource Include="rentrecord.resx">
       <DependentUpon>rentrecord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="seller_home.resx">
+      <DependentUpon>seller_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seller_info.resx">
+      <DependentUpon>seller_info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Userbookingreq.resx">
       <DependentUpon>Userbookingreq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_Table_approved.resx">
+      <DependentUpon>view_Table_approved.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -208,6 +262,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\req.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_campus_view_from_stadium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\make the picture ghi %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grass_optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit the uploaded im %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3135715 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Make it Ghibli style%281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%291.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Make_the_uploaded_im_1_optimized1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_2025-06-30_091953621_optimized1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Make_the_uploaded_im_1_optimized2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\You_made_the_image_v_optimized.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

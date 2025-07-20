@@ -22,7 +22,7 @@ namespace task
         public Dashboard(string userEmail)
         {
             this.userEmail = userEmail;
-            InitializeComponent();      // Ensure this is called to initialize the form components  
+            InitializeComponent();      
             RetrieveUserName();
             RetrieveUserDetails();
         }
@@ -31,7 +31,7 @@ namespace task
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            // No changes needed here  
+
         }
 
 
@@ -113,7 +113,12 @@ namespace task
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "SELECT name FROM Table_reg WHERE email = @Email";
+
+
+
                     SqlCommand command = new SqlCommand(query, connection);
+
+
                     command.Parameters.AddWithValue("@Email", email);
 
                     connection.Open();
@@ -122,14 +127,22 @@ namespace task
                     if (reader.Read())
                     {
                         string userName = reader["name"] as string;
+
+
                         if (!string.IsNullOrEmpty(userName))
                         {
                             label3.Text = userName;
+
+
+
                             label6.Text = userName;
                         }
                         else
                         {
                             label3.Text = "Name not found.";
+
+
+
                             MessageBox.Show("Name data is null.");
                         }
                     }
@@ -142,9 +155,11 @@ namespace task
                     reader.Close();
                 }
             }
+
             catch (Exception ex)
             {
-                label3.Text = "Error";
+                label3.Text = "there is a problem";
+
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -160,7 +175,7 @@ namespace task
             panel19.BringToFront();
             profilepanel.SendToBack();
             mainpanel.SendToBack();
-            // Ensure profilepanel is sent to the back  
+            
             RetrieveUserDetails();
         }
 
@@ -175,9 +190,10 @@ namespace task
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.Close(); // Close the current Dashboard form  
+            this.Close(); 
             LoginUser f = new LoginUser();
-            f.Show(); // Open Form1 as a dialog  
+            f.Show(); 
+            
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -229,6 +245,8 @@ namespace task
                         txtphone.Text = reader["phoneno"]?.ToString() ?? "Phone number not found.";
                         txtage.Text = reader["age"]?.ToString() ?? "Age not found.";
                         txtpass.Text = reader["password"]?.ToString() ?? "Password not found.";
+
+
 
                         label6.Text = reader["name"]?.ToString() ?? "Name not found.";
                         Email.Text = reader["email"]?.ToString() ?? "Email not found.";
@@ -287,6 +305,7 @@ namespace task
             string qq = "UPDATE Table_reg SET NAME='" + txtname.Text + "', PASSWORD='" + txtpass.Text + "', phoneno='" + txtphone.Text + "', NID='" + txtnid.Text + "', Age='" + txtage.Text + "' WHERE email='" + userEmail + "'";
             SqlCommand cmd = new SqlCommand(qq, conn);
             int rowsAffected = cmd.ExecuteNonQuery();
+
             if (rowsAffected > 0)
             {
                 MessageBox.Show("User details updated successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -334,9 +353,9 @@ namespace task
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close(); // Close the current Dashboard form  
-            Booking bookingForm = new Booking(userEmail); // Pass the email to the Booking class  
-            bookingForm.ShowDialog(); // Open the Booking form as a dialog  
+            this.Close();   
+            Booking bookingForm = new Booking(userEmail);  
+            bookingForm.ShowDialog(); 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -356,10 +375,11 @@ namespace task
 
         private void button9_Click(object sender, EventArgs e)
         {
-            //see booking request
-           Userbookingreq r= new Userbookingreq(userEmail);
+            this.Close();
+          
+            Userbookingreq r= new Userbookingreq(userEmail);
             r.Show();
-            this.Close(); // Close the current Dashboard form
+           
 
         }
 
@@ -381,10 +401,10 @@ namespace task
 
         private void button8_Click(object sender, EventArgs e)
         {
-            //show rent records 
+            
             rentrecord r = new rentrecord(userEmail);
             r.Show();
-            this.Close(); // Close the current Dashboard form
+            this.Close(); 
 
         }
 
@@ -440,8 +460,10 @@ namespace task
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT SUM(fee) AS TotalFee FROM Table_approved WHERE email = @Email";
+                    string query = "SELECT SUM (fee) AS TotalFee FROM Table_approved WHERE email = @Email";
+
                     SqlCommand command = new SqlCommand(query, connection);
+
                     command.Parameters.AddWithValue("@Email", email);
 
                     connection.Open();
@@ -449,13 +471,12 @@ namespace task
 
                     if (result != null && result != DBNull.Value)
                     {
+
                         decimal totalFee = Convert.ToDecimal(result);
+
                         MessageBox.Show($"Total fee for the user is: {totalFee}", "Payment Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else
-                    {
-                        MessageBox.Show("No fee records found for the provided email.", "Payment Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    
                 }
             }
             catch (Exception ex)

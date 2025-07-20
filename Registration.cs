@@ -18,36 +18,60 @@ namespace Field_Renting_System
     {
         private string name, email,age, pass, Nid, gender, phoneno;
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Hide(); // Hide the current form instead of closing it  
+                LoginUser u = new LoginUser();
+                u.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while navigating to the LoginUser page: " + ex.Message);
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            // Insert photo and email into Table_userimage  
+             
             string connectionString = @"Data Source=MAHIN;Initial Catalog=testing_db;Integrated Security=True";
+
+
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
+
+
                 string query = "INSERT INTO Table_userimage (Email, image) VALUES (@Email, @Photo)";
+
+
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Email", textBox_email.Text);
 
-                    // Convert image to byte array  
+
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
                         if (openFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             byte[] imageBytes = System.IO.File.ReadAllBytes(openFileDialog.FileName);
+
+
                             cmd.Parameters.AddWithValue("@Photo", imageBytes);
                         }
                         else
                         {
                             MessageBox.Show("Please select an image.");
+
+
                             return;
                         }
                     }
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Photo and email inserted successfully.");
+                   
                 }
             }
         }
@@ -70,58 +94,28 @@ namespace Field_Renting_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-           name = textBox_name.Text;
-           email = textBox_email.Text;
-           pass = textBox_pass.Text;
-           phoneno = textBox_phoneno.Text;
-          /*  int num;
-            if (int.TryParse(textBox_Age.Text, out num))
-            {
-                if (num <11)
-                {
-                    //  MessageBox.Show("Age is greater than 18.");
-                    // You can proceed with registration here
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a valid number.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid digit.");
-            }
-          */
+            name = textBox_name.Text;
+            email = textBox_email.Text;
+            pass = textBox_pass.Text;
+            phoneno = textBox_phoneno.Text;
             Nid = textBox_NID.Text;
-           if (Male.Checked)
-               gender = "Male";
-           else if (Female.Checked)
+
+            if (Male.Checked)
+                gender = "Male";
+            else if (Female.Checked)
                 gender = "Female";
 
-           
-
-            //   if (cbprogramming.Checked)
-            //     skills = "Programming,";
-            // if (cbcommunication.Checked)
-            //     skills += "Communication,";
-            // if (cbresearch.Checked)
-            //     skills += "Research";
-            // dept = comboBox1.Text;
-
-         /*   MessageBox.Show("Name:" + name + "\n Email:" + email 
-               + " \n Password" + pass 
-                + "\n Gender:" + 
-               gender 
-               +"\n age"+age  );
-         */
-           
-            insert();
-            LoginUser l = new LoginUser();
-            l.Show();
-            this.Close();   
-
-
-
+            try
+            {
+                insert();
+                MessageBox.Show("Registration completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              //  LoginUser l = new LoginUser();
+              //  l.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred during registration: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

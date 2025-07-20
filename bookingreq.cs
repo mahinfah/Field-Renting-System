@@ -53,14 +53,13 @@ namespace Field_Renting_System
             {
                 conn.Open();
 
-                // Get selected rows from DataGridView  
+                
                 foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
                 {
                     if (selectedRow.DataBoundItem is DataRowView rowView)
                     {
                         DataRow row = rowView.Row;
 
-                        // Insert data into Table_approved  
                         string insertQuery = "INSERT INTO Table_approved (Email, field_id, field_name, field_type, fee, location, slots) VALUES (@Value1, @Value2, @Value3, @Value4, @Value5, @Value6, @Value7)";
                         SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
 
@@ -69,7 +68,6 @@ namespace Field_Renting_System
                         insertCmd.Parameters.AddWithValue("@Value3", row["field_name"]);
                         insertCmd.Parameters.AddWithValue("@Value4", row["field_type"]);
 
-                        // Convert fee to float safely  
                         float feeValue = 0;
                         float.TryParse(row["fee"]?.ToString(), out feeValue);
                         insertCmd.Parameters.AddWithValue("@Value5", feeValue);
@@ -79,12 +77,10 @@ namespace Field_Renting_System
 
                         insertCmd.ExecuteNonQuery();
 
-                        // Delete the row from Table_bookingreq  
                         string deleteQuery = "DELETE FROM Table_bookingreq WHERE field_id = @FieldId";
                         SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn);
                         deleteCmd.Parameters.AddWithValue("@FieldId", row["field_id"]);
 
-                        // Ensure the delete command is executed properly  
                         int rowsAffected = deleteCmd.ExecuteNonQuery();
                         if (rowsAffected == 0)
                         {
@@ -93,7 +89,7 @@ namespace Field_Renting_System
                     }
                 }
 
-                // Refresh the DataGridView  
+              
                 Show();
             }
         }
@@ -104,39 +100,35 @@ namespace Field_Renting_System
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-
-                // Get selected rows from DataGridView  
+  
                 foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
                 {
                     if (selectedRow.DataBoundItem is DataRowView rowView)
                     {
                         DataRow row = rowView.Row;
 
-                        // Insert data into field_table1 excluding Email  
-                        string insertQuery = "INSERT INTO field_table1 (field_id, field_name, field_type, fee, location, slots) VALUES (@Value1, @Value2, @Value3, @Value4, @Value5, @Value6)";
+                                                string insertQuery = "INSERT INTO field_table1 (field_id, field_name, field_type, fee, location, slots) VALUES (@Value1, @Value2, @Value3, @Value4, @Value5, @Value6)";
                         SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
 
                         insertCmd.Parameters.AddWithValue("@Value1", row["field_id"]);
                         insertCmd.Parameters.AddWithValue("@Value2", row["field_name"]);
                         insertCmd.Parameters.AddWithValue("@Value3", row["field_type"]);
 
-                        // Convert fee to float safely  
+                
                         float feeValue = 0;
                         float.TryParse(row["fee"]?.ToString(), out feeValue);
                         insertCmd.Parameters.AddWithValue("@Value4", feeValue);
 
                         insertCmd.Parameters.AddWithValue("@Value5", row["location"]);
                         insertCmd.Parameters.AddWithValue("@Value6", row["slots"]);
-                      //  insertCmd.Parameters.AddWithValue("@Value7", "Rejected");
-
+                      
                         insertCmd.ExecuteNonQuery();
-
-                        // Delete the row from Table_bookingreq  
+ 
                         string deleteQuery = "DELETE FROM Table_bookingreq WHERE field_id = @FieldId";
                         SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn);
                         deleteCmd.Parameters.AddWithValue("@FieldId", row["field_id"]);
 
-                        // Ensure the delete command is executed properly  
+                     
                         int rowsAffected = deleteCmd.ExecuteNonQuery();
                         if (rowsAffected == 0)
                         {
@@ -144,10 +136,16 @@ namespace Field_Renting_System
                         }
                     }
                 }
-
-                // Refresh the DataGridView  
+ 
                 Show();
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            seller_home nnn = new seller_home();
+            nnn.Show();
+            this.Close();
         }
     }
 }
